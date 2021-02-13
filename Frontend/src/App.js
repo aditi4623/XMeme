@@ -28,7 +28,7 @@ var requestOptions = {
   headers: myHeaders,
   redirect: 'follow'
 };
-fetch("http://localhost:3300", requestOptions)
+fetch("https://xmeme-aditi.herokuapp.com/", requestOptions)
   .then(response => response.json())
   .then(result => {
     console.log(result)
@@ -65,7 +65,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:3300", requestOptions)
+fetch("https://xmeme-aditi.herokuapp.com/", requestOptions)
   .then(response => response.json())
   .then(result => {
     console.log(result)
