@@ -1,0 +1,16 @@
+{
+  "name": "Xmeme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd Backend && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.crio.do/COHORT_ME_BUILDOUT_XMEME_ENROLL_1612436694845/soniaditi4623-me_buildout_xmeme"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
