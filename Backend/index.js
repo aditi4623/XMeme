@@ -10,9 +10,9 @@ app.use(bodyParser.json());
 const PORT=process.env.PORT || 8081
 const {ADD_MEME,GET_MEME,DELETE_MEME}=require('./query')
 
-app.post("/", ADD_MEME);
-app.get('/', GET_MEME);
-app.delete('/',DELETE_MEME);
+app.post("/memes", ADD_MEME);
+app.get('/memes', GET_MEME);
+app.delete('/memes',DELETE_MEME);
 
 app.listen(PORT,()=>{
     console.log("server is running at "+ PORT)
