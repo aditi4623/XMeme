@@ -13,7 +13,8 @@ import {
 import {MDBCardImage, MDBCardTitle, MDBCardText,MDBIcon} from 'mdbreact';
 import './App.css';
 import Swal from 'sweetalert2'
-                 
+ 
+//stores the current state
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -28,6 +29,7 @@ var requestOptions = {
   headers: myHeaders,
   redirect: 'follow'
 };
+   //to fetch the api
 fetch("https://xmeme-aditi.herokuapp.com/", requestOptions)
   .then(response => response.json())
   .then(result => {
@@ -36,6 +38,7 @@ fetch("https://xmeme-aditi.herokuapp.com/", requestOptions)
   })
   .catch(error => console.log('error', error));
    }
+  //to change state of object
    myChangeHandler1 = (event) => {
    this.setState({username: event.target.value});
    }
@@ -45,6 +48,7 @@ fetch("https://xmeme-aditi.herokuapp.com/", requestOptions)
     myChangeHandler3 = (event) => {
       this.setState({imageurl: event.target.value});
       }
+    //to save response
     saveResponse=()=>{
       var imageurl=this.state.imageurl;
       var text=this.state.text;
