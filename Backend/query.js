@@ -8,8 +8,8 @@ module.exports.ADD_MEME = async(req, res, next) => {
         var text = req.body.text;
         var url = req.body.url;
         if (name && text && url) {
-            let sql = `INSERT INTO meme(name,text, url) VALUES ('${name}','${text}' ,'${url}')`;
-            await pool.query(sql);
+            let sql = `INSERT INTO meme(name,text, url) VALUES (?,?,?)`;
+            await pool.query(sql,[name,text,url]);
             res.status(200).json({
                 message: "Saved",
                 status: 1,
